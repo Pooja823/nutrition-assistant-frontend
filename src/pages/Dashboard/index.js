@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Chart from 'react-apexcharts';
 import LinearProgress, {
     linearProgressClasses,
@@ -6,16 +6,13 @@ import LinearProgress, {
 import { Alert, Grid, styled } from '@mui/material';
 import { Box, Container } from '@mui/system';
 import FoodCard from '../../Components/FoodCard';
-import BottomNavBar from '../../Components/BottomNavBar';
-import { API } from '../../services/apis';
-import { useSnackbar } from 'notistack';
 import { formatAMPM } from '../../utils/utils';
 import { FullPageLoading } from '../../Components/LoadingSpinner';
 import { AppContext } from '../../Context/AppContext';
 import CloseIcon from '@mui/icons-material/Close';
 import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
-import Joyride, { CallBackProps, STATUS, Step } from 'react-joyride';
 import { motion } from 'framer-motion';
+import Joyride, { STATUS } from 'react-joyride';
 
 const tourMotion = {
     offscreen: {
