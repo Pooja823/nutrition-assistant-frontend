@@ -1,9 +1,7 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import styles from '../../styles/blog.module.css';
 import { Box, Container, Grid } from '@mui/material';
 import { Button } from '@mui/material';
-import nature from '../../images/healthtips.jpg';
 import week from '../../images/week-plan.jpg';
 const Blogs = () => {
     const navigate = useNavigate();
@@ -40,7 +38,7 @@ const Blogs = () => {
                                 className={styles.cardContainer}
                             >
                                 <div className={styles.cardImage}>
-                                    <img src={nature} />
+                                    <img src={nature} alt="Healthy food example" />
                                 </div>
                                 <div className={styles.cardBody}>
                                     <span className={styles.cardBadge}>

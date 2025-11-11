@@ -91,7 +91,7 @@ function calorieProgressColor({ value, seriesIndex, w }) {
     }
 }
 const Dashboard = () => {
-    const { nutrients, setnutrients, todayFoodItems } = useContext(AppContext);
+    const { nutrients, todayFoodItems } = useContext(AppContext);
     const [tourRun, settourRun] = useState(false);
     const { isLoading, isTourTaken, setisTourTaken } = useContext(AppContext);
     const todaysCaloriesPercent =

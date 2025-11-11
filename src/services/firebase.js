@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 
-const app = initializeApp({
+initializeApp({
     apiKey: 'AIzaSyBWaR7GFC6DeBbVOVSCqWaDMeYnxpd_w_s',
     authDomain: 'nutricheck-app.firebaseapp.com',
     projectId: 'nutricheck-app',
@@ -12,12 +12,11 @@ const app = initializeApp({
 
 export const googleOauthPopup = async () => {
     const provider = new GoogleAuthProvider();
-
     const auth = getAuth();
+
     try {
         const result = await signInWithPopup(auth, provider);
         return result.user.getIdToken();
-        // ...
     } catch (error) {
         console.log(error);
     }

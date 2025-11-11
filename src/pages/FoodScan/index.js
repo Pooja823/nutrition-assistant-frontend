@@ -114,7 +114,7 @@ const ScannedImg = () => {
             setfoodItems(state.foodItems);
             setimageBlob(state.imageBlob);
         }
-    }, []);
+    }, [navigate, state.foodItems, state.imageBlob, state.image_url]);
 
     return (
         <div
