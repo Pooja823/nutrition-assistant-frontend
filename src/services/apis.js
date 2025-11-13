@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Replace this with your deployed backend URL
-const BASE_URL = 'https://nutrition-assistant-backend-production.up.railway.app'; 
+const BASE_URL = 'https://nutrition-assistant-backend-production.up.railway.app/api'; 
 
 export const Axios = axios.create({
   baseURL: BASE_URL,
